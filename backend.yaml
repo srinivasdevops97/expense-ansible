@@ -38,7 +38,7 @@
 
   - name: install dependencies
     community.general.npm:
-    path: /app 
+      path: /app 
 
   - name: copy backend service file
     ansible.builtin.copy:
