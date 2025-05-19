@@ -41,16 +41,16 @@
       name: npm
       state: latest
 
-  # - name: copy backend service file
-  #   ansible.builtin.copy:
-  #     src: backend.service
-  #     dest: /etc/systemd/system/backend.service
+  - name: copy backend service file
+    ansible.builtin.copy:
+      src: backend.service
+      dest: /etc/systemd/system/backend.service
 
-  # - name: import mysql data
-  #   community.mysql.mysql_db:
-  #     login_user: root
-  #     login_password: "{{ mysql_root_password }}"
-  #     login_host: "{{ login_host }}"
-  #     target: /app/schema/backend.sql
-  #     name: all
-  #     state: dump
+  - name: import mysql data
+    community.mysql.mysql_db:
+      login_user: root
+      login_password: "{{ mysql_root_password }}"
+      login_host: "{{ login_host }}"
+      target: /app/schema/backend.sql
+      name: all
+      state: dump
