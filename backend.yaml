@@ -14,7 +14,7 @@
   - name: install nodejs and mysql 
     ansible.builtin.package:
       name: "{{ item }}"
-      state: present
+      state: latest
     loop:
     - nodejs
     - mysql
@@ -70,3 +70,4 @@
       daemon_reload: true
       state: restarted
       name: backend
+      enabled: true
