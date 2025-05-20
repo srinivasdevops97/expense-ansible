@@ -42,7 +42,7 @@
   - name: install dependencies
     ansible.builtin.package:
       name: npm
-      state: latest
+      state: present
 
   - name: copy backend service file
     ansible.builtin.copy:
