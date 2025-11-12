@@ -17,6 +17,7 @@
       state: latest
     loop:
     - nodejs
+    - npm
     - mysql
 
   - name: create expense user 
